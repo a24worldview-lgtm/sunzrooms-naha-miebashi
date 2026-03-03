@@ -14,7 +14,7 @@ const platforms = [
   {
     name: "Airbnb",
     url: "https://airbnb.jp/h/sunzrooms101",
-    note: "海外からのご予約に便利",
+    note: "世界標準の予約サイトで安心",
     color: "#FF5A5F",
     active: true,
     rooms: [
