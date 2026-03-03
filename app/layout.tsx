@@ -1,0 +1,59 @@
+import type { Metadata, Viewport } from "next";
+import { DM_Sans, Noto_Sans_JP } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import "./globals.css";
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+  display: "swap",
+});
+
+const notoSansJP = Noto_Sans_JP({
+  subsets: ["latin"],
+  variable: "--font-noto-sans-jp",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: "SUNZROOMS. — naha miebashi | 暮らすように、泊まる。",
+  description:
+    "A designer guesthouse in Miebashi, Naha, Okinawa. 3 unique private floors — live as you stay. 那覇・美栄橋のデザイナーズゲストハウス。暮らすように、泊まる。",
+  keywords: [
+    "Okinawa",
+    "Naha",
+    "guesthouse",
+    "vacation rental",
+    "Miebashi",
+    "SUNZROOMS",
+    "沖縄",
+    "那覇",
+    "ゲストハウス",
+  ],
+  openGraph: {
+    title: "SUNZROOMS. — naha miebashi",
+    description: "暮らすように、泊まる。Live as you stay.",
+    type: "website",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#FAF8F5",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="ja" className={`${dmSans.variable} ${notoSansJP.variable}`}>
+      <body className="font-sans antialiased">{children}</body>
+      <Analytics />
+    </html>
+  );
+}
