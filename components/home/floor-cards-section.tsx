@@ -10,7 +10,7 @@ const floors = [
     area: "32㎡",
     guests: "最大4名",
     beds: "4ベッド",
-    baths: "バスルーム1",
+    baths: "シャワールーム1",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LINE_ALBUM_1F_260227_4-UMKNCxJOSwNgQNfzni2FSHUkMOJUtr.jpg",
     alt: "1Fダイニング：アーチ型ロフト、ラタンチェア、丸い木製テーブル",
@@ -23,7 +23,7 @@ const floors = [
     area: "55㎡",
     guests: "最大7名",
     beds: "4ベッド+布団3組",
-    baths: "バスルーム2",
+    baths: "シャワールーム2",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LINE_ALBUM_2F_260227_2-1funoM26icrUeEyzEgsgJGr4yoGGCS.jpg",
     alt: "2F寝室：竹のペンダントライト、木のプラットフォームベッド、ロフトエリア",
@@ -36,7 +36,7 @@ const floors = [
     area: "57㎡",
     guests: "最大8名",
     beds: "8ベッド",
-    baths: "バスルーム2",
+    baths: "シャワールーム2",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LINE_ALBUM_3F_260227_6-F6RLezSvon04lilhUopEarktSlv8aM.jpg",
     alt: "3Fダイニング：ラタンペンダントライト、丸テーブル、編み込みチェア",
