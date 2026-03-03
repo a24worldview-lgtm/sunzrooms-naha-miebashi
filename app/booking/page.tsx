@@ -156,7 +156,7 @@ export default function BookingPage() {
                             rel="noopener noreferrer"
                             className="flex items-center justify-between rounded-lg bg-secondary/50 px-3 py-2 text-sm text-charcoal transition-colors hover:bg-secondary"
                           >
-                            <span>{room.label}</span>
+                            <span className="tabular-nums">{room.label}</span>
                             <ExternalLink
                               size={13}
                               className="text-muted-foreground"
