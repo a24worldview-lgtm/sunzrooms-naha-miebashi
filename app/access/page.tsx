@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 };
 
 const nearbySpots = [
-  { name: "コンビニ", time: "徒歩1分" },
+  { name: "最寄りのコンビニ", time: "徒歩1分" },
   { name: "国際通り", time: "徒歩8分" },
-  { name: "ドン・キホーテ", time: "徒歩8分" },
-  { name: "牧志公設市場", time: "徒歩8分" },
+  { name: "ドン・キホーテ国際通り店", time: "徒歩9分" },
+  { name: "牧志公設市場", time: "徒歩11分" },
   { name: "とまりん（泊港・離島フェリーターミナル）", time: "徒歩9分" },
 ];
 
