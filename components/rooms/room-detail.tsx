@@ -33,7 +33,7 @@ const amenityIcons: Record<string, React.ReactNode> = {
   "Wi-Fi": <Wifi size={16} />,
   エアコン: <AirVent size={16} />,
   テレビ: <Tv size={16} />,
-  洗濯機: <WashingMachine size={16} />,
+  洗濯乾燥機: <WashingMachine size={16} />,
 };
 
 export function RoomDetail({
@@ -52,7 +52,7 @@ export function RoomDetail({
   description,
   reverse = false,
 }: RoomDetailProps) {
-  const amenities = ["キッチン", "Wi-Fi", "エアコン", "テレビ", "洗濯機"];
+  const amenities = ["キッチン", "Wi-Fi", "エアコン", "テレビ", "洗濯乾燥機"];
 
   return (
     <div id={id} className="scroll-mt-24 py-16 first:pt-0 lg:py-24">
