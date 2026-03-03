@@ -16,7 +16,7 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "SUNZROOMS. — naha miebashi | 暮らすように、泊まる。",
+  title: "SUNZ ROOMS. — naha miebashi | 暮らすように、泊まる。",
   description:
     "A designer guesthouse in Miebashi, Naha, Okinawa. 3 unique private floors — live as you stay. 那覇・美栄橋のデザイナーズゲストハウス。暮らすように、泊まる。",
   keywords: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "ゲストハウス",
   ],
   openGraph: {
-    title: "SUNZROOMS. — naha miebashi",
+    title: "SUNZ ROOMS. — naha miebashi",
     description: "暮らすように、泊まる。Live as you stay.",
     type: "website",
   },

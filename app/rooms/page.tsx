@@ -5,7 +5,7 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 import { RoomDetail } from "@/components/rooms/room-detail";
 
 export const metadata: Metadata = {
-  title: "お部屋 — SUNZROOMS. | 3フロア、3つのユニークな空間",
+  title: "お部屋 — SUNZ ROOMS. | 3フロア、3つのユニークな空間",
   description:
     "沖縄・那覇のSUNZROOMSの3つのユニークなフロアをご覧ください。各フロアは完全プライベートな自己完結型の居住空間です。",
 };

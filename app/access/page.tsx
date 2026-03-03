@@ -5,16 +5,16 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 import { Train, MapPin, PersonStanding, Plane } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "アクセス・周辺情報 — SUNZROOMS. | 美栄橋駅 徒歩約1分",
+  title: "アクセス・周辺情報 — SUNZ ROOMS. | 美栄橋駅 徒歩約1分",
   description:
     "SUNZROOMSは沖縄・那覇の美栄橋駅から徒歩約1分。国際通り、牧志公設市場、とまりんフェリーターミナルへも好アクセス。",
 };
 
 const nearbySpots = [
-  { name: "最寄りのコンビニ", time: "徒歩1分" },
+  { name: "コンビニ", time: "徒歩1分" },
   { name: "国際通り", time: "徒歩8分" },
-  { name: "ドン・キホーテ国際通り店", time: "徒歩9分" },
-  { name: "牧志公設市場", time: "徒歩11分" },
+  { name: "ドン・キホーテ", time: "徒歩8分" },
+  { name: "牧志公設市場", time: "徒歩8分" },
   { name: "とまりん（泊港・離島フェリーターミナル）", time: "徒歩9分" },
 ];
 

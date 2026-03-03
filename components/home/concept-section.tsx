@@ -39,7 +39,7 @@ export function ConceptSection() {
           <p className="text-base leading-[2] text-muted-foreground md:text-lg">
             各フロアはすべて独立したプライベート空間。
             <br />
-            {"自分たちだけの「沖縄の家」で、"}
+            自分たちだけの「沖縄の家」で、
             <br />
             自由きままな時間をお過ごしください。
           </p>

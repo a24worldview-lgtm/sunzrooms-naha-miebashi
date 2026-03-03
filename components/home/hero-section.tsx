@@ -31,7 +31,7 @@ export function HeroSection() {
           className={`transition-all duration-1000 ease-out ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
           <h1 className="text-4xl font-bold tracking-[0.2em] text-cream md:text-6xl lg:text-7xl">
-            SUNZROOMS.
+            SUNZ ROOMS.
           </h1>
           <p className="mt-2 text-xs tracking-[0.3em] text-cream/70 md:text-sm">
             naha miebashi

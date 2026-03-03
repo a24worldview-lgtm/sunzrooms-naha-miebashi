@@ -10,7 +10,7 @@ export function SiteFooter() {
           <div className="flex flex-col gap-3">
             <div>
               <p className="text-xl font-bold tracking-[0.15em] text-charcoal">
-                SUNZROOMS.
+                SUNZ ROOMS.
               </p>
               <p className="text-[10px] tracking-[0.2em] text-muted-foreground">
                 naha miebashi
@@ -81,7 +81,7 @@ export function SiteFooter() {
         {/* Bottom bar */}
         <div className="mt-10 border-t border-border pt-6 text-center">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} SUNZROOMS. All rights reserved.
+            &copy; {new Date().getFullYear()} SUNZ ROOMS. All rights reserved.
           </p>
         </div>
       </div>

@@ -5,7 +5,7 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 import { ExternalLink } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "ご予約 — SUNZROOMS. | お好みのプラットフォームで予約",
+  title: "ご予約 — SUNZ ROOMS. | お好みのプラットフォームで予約",
   description:
     "Airbnb、Booking.com、楽天トラベル、じゃらん、ヤフートラベル、Agodaから、SUNZROOMSのご予約が可能です。",
 };

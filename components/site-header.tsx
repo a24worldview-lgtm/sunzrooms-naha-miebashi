@@ -58,7 +58,7 @@ export function SiteHeader() {
               useTransparent ? "text-primary-foreground" : "text-charcoal"
             )}
           >
-            SUNZROOMS.
+            SUNZ ROOMS.
           </span>
           <span
             className={cn(
