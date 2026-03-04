@@ -113,6 +113,14 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  /* ===== SUNZ ROOMS カスタムカラー（復元） ===== */
+  --color-cream: #FAF8F5;
+  --color-charcoal: #2C2C2C;
+  --color-wood: #8B7355;
+  --color-wood-dark: #6B5A45;
+  --color-wood-light: #A8956F;
+  --color-sand: #E8E0D4;
 }
 
 @layer base {
@@ -125,7 +133,6 @@
 }
 
 /* ===== 言語別フォント設定 ===== */
-/* @layerの外に配置して優先度を確保 */
 body[data-lang="zh-cn"],
 body[data-lang="zh-cn"] * {
   font-family: 'Noto Sans SC', 'DM Sans', sans-serif !important;
@@ -149,4 +156,17 @@ body[data-lang="ja"] * {
 body[data-lang="en"],
 body[data-lang="en"] * {
   font-family: 'DM Sans', sans-serif !important;
+}
+
+/* ===== CJK見出しのfont-weight統一 ===== */
+body[data-lang="zh-cn"] h1,
+body[data-lang="zh-cn"] h2,
+body[data-lang="zh-cn"] h3,
+body[data-lang="zh-tw"] h1,
+body[data-lang="zh-tw"] h2,
+body[data-lang="zh-tw"] h3,
+body[data-lang="ko"] h1,
+body[data-lang="ko"] h2,
+body[data-lang="ko"] h3 {
+  font-weight: 400 !important;
 }
