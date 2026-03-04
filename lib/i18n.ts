@@ -80,7 +80,7 @@ export const translations = {
     comingSoon: { ja: "まもなく対応予定", en: "Coming soon", "zh-cn": "即将上线", "zh-tw": "即將上線", ko: "곧 지원 예정" },
     preparing: { ja: "準備中", en: "Coming soon", "zh-cn": "准备中", "zh-tw": "準備中", ko: "준비 중" },
     platformNotes: {
-      airbnb: { ja: "海外からのご予約に便利", en: "Great for international guests", "zh-cn": "方便海外预订", "zh-tw": "方便海外訂房", ko: "해외에서 예약하기 편리" },
+      airbnb: { ja: "世界標準の予約サイトで安心", en: "The world's most trusted booking platform", "zh-cn": "全球标准预订平台，安心预订", "zh-tw": "全球標準訂房平台，安心預訂", ko: "세계 표준 예약 사이트로 안심" },
       booking: { ja: "世界中で利用される予約サイト", en: "Used worldwide", "zh-cn": "全球知名预订平台", "zh-tw": "全球知名訂房平台", ko: "전 세계에서 이용되는 예약 사이트" },
       rakuten: { ja: "楽天ポイントが貯まる！", en: "Earn Rakuten points!", "zh-cn": "可积累乐天积分！", "zh-tw": "可累積樂天點數！", ko: "라쿠텐 포인트 적립!" },
       jalan: { ja: "国内旅行に大人気", en: "Popular for domestic travel", "zh-cn": "日本国内旅行首选", "zh-tw": "日本國內旅行首選", ko: "일본 국내 여행에 인기" },
