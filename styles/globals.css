@@ -122,4 +122,21 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* 言語別フォント設定 */
+  [data-lang="zh-cn"] {
+    font-family: var(--font-noto-sans-sc), var(--font-dm-sans), sans-serif;
+  }
+  [data-lang="zh-tw"] {
+    font-family: var(--font-noto-sans-tc), var(--font-dm-sans), sans-serif;
+  }
+  [data-lang="ko"] {
+    font-family: var(--font-noto-sans-kr), var(--font-dm-sans), sans-serif;
+  }
+  [data-lang="ja"] {
+    font-family: var(--font-noto-sans-jp), var(--font-dm-sans), sans-serif;
+  }
+  [data-lang="en"] {
+    font-family: var(--font-dm-sans), sans-serif;
+  }
 }
