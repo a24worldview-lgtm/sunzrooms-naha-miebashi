@@ -8,6 +8,9 @@ import {
   AirVent,
   Tv,
   WashingMachine,
+  Microwave,
+  Wind,
+  CupSoda,
 } from "lucide-react";
 import { ScrollReveal } from "@/components/scroll-reveal";
 
@@ -34,6 +37,9 @@ const amenityIcons: Record<string, React.ReactNode> = {
   エアコン: <AirVent size={16} />,
   テレビ: <Tv size={16} />,
   洗濯乾燥機: <WashingMachine size={16} />,
+  電子レンジ: <Microwave size={16} />,
+  ドライヤー: <Wind size={16} />,
+  電気ケトル: <CupSoda size={16} />,
 };
 
 export function RoomDetail({
@@ -52,7 +58,7 @@ export function RoomDetail({
   description,
   reverse = false,
 }: RoomDetailProps) {
-  const amenities = ["キッチン", "Wi-Fi", "エアコン", "テレビ", "洗濯乾燥機"];
+  const amenities = ["キッチン", "Wi-Fi", "エアコン", "テレビ", "洗濯機", "電子レンジ", "ドライヤー", "電気ケトル"];
 
   return (
     <div id={id} className="scroll-mt-24 py-16 first:pt-0 lg:py-24">
