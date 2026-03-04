@@ -1,6 +1,5 @@
 "use client";
-
-import { createContext, useContext, useState, type ReactNode } from "react";
+import { createContext, useContext, useState, useEffect, type ReactNode } from "react";
 import type { Locale } from "./i18n";
 
 interface LanguageContextType {
@@ -15,6 +14,10 @@ const LanguageContext = createContext<LanguageContextType>({
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [locale, setLocale] = useState<Locale>("ja");
+
+  useEffect(() => {
+    document.body.setAttribute("data-lang", locale);
+  }, [locale]);
 
   return (
     <LanguageContext.Provider value={{ locale, setLocale }}>
