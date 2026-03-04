@@ -20,7 +20,7 @@ export function SiteFooter() {
               <MapPin size={14} className="mt-0.5 shrink-0" />
               <span>沖縄県那覇市前島1丁目1-13</span>
             </div>
-            href="mailto:sunzrooms@gmail.com"
+            <a href="mailto:sunzrooms@gmail.com"
               className="flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-charcoal"
             >
               <Mail size={14} className="shrink-0" />
