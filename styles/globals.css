@@ -122,21 +122,31 @@
   body {
     @apply bg-background text-foreground;
   }
+}
 
-  /* 言語別フォント設定 */
-  [data-lang="zh-cn"] {
-    font-family: var(--font-noto-sans-sc), var(--font-dm-sans), sans-serif;
-  }
-  [data-lang="zh-tw"] {
-    font-family: var(--font-noto-sans-tc), var(--font-dm-sans), sans-serif;
-  }
-  [data-lang="ko"] {
-    font-family: var(--font-noto-sans-kr), var(--font-dm-sans), sans-serif;
-  }
-  [data-lang="ja"] {
-    font-family: var(--font-noto-sans-jp), var(--font-dm-sans), sans-serif;
-  }
-  [data-lang="en"] {
-    font-family: var(--font-dm-sans), sans-serif;
-  }
+/* ===== 言語別フォント設定 ===== */
+/* @layerの外に配置して優先度を確保 */
+body[data-lang="zh-cn"],
+body[data-lang="zh-cn"] * {
+  font-family: 'Noto Sans SC', 'DM Sans', sans-serif !important;
+}
+
+body[data-lang="zh-tw"],
+body[data-lang="zh-tw"] * {
+  font-family: 'Noto Sans TC', 'DM Sans', sans-serif !important;
+}
+
+body[data-lang="ko"],
+body[data-lang="ko"] * {
+  font-family: 'Noto Sans KR', 'DM Sans', sans-serif !important;
+}
+
+body[data-lang="ja"],
+body[data-lang="ja"] * {
+  font-family: 'Noto Sans JP', 'DM Sans', sans-serif !important;
+}
+
+body[data-lang="en"],
+body[data-lang="en"] * {
+  font-family: 'DM Sans', sans-serif !important;
 }
