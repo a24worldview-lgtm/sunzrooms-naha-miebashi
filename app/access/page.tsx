@@ -100,8 +100,7 @@ export default function AccessPage() {
             <ScrollReveal delay={100}>
               <div className="mt-8 overflow-hidden rounded-2xl border border-border">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.841!2d127.6768!3d26.3365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e569d9c1e7c5a7%3A0x0!2z576O5qCE5qmL6aeF!5e0!3m2!1sja!2sjp!4v1709000000000!5m2!1sja!2sjp"
-                  width="100%"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.286651249736!2d127.68239937701941!3d26.219873977067053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5698216554677%3A0x6cf73e73fea94777!2sSUNZ%20ROOMS.-naha%20miebashi-!5e0!3m2!1sja!2sjp!4v1772596005041!5m2!1sja!2sjp"
                   height="400"
                   style={{ border: 0 }}
                   allowFullScreen
