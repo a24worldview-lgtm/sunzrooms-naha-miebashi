@@ -12,7 +12,7 @@ export const translations = {
     heading: { ja: "暮らすように、泊まる。", en: "Live as you stay.", "zh-cn": "像生活一样，住下来。", "zh-tw": "像生活一樣，住下來。", ko: "살듯이, 머무르다." },
     p1: { ja: "ただ泊まるだけの場所ではなく、\nまるでこの街に暮らしているかのように過ごせる宿。", en: "Not just a place to sleep —\na place to live as if this town were your own.", "zh-cn": "这里不仅仅是住宿，\n而是让您如同生活在这座城市一般的旅宿。", "zh-tw": "這裡不僅僅是住宿，\n而是讓您如同生活在這座城市一般的旅宿。", ko: "단순히 묵는 곳이 아닌,\n이 거리에서 살고 있는 듯한 숙소." },
     p2: { ja: "キッチンで朝ごはんをつくり、\nお気に入りのカフェを見つけ、\n夕暮れの街をふらりと歩く。", en: "Cook breakfast in the kitchen,\ndiscover your favorite café,\nstroll through the streets at dusk.", "zh-cn": "在厨房做早餐，\n发现喜爱的咖啡馆，\n在黄昏时分漫步街头。", "zh-tw": "在廚房做早餐，\n發現喜愛的咖啡館，\n在黃昏時分漫步街頭。", ko: "주방에서 아침을 만들고,\n마음에 드는 카페를 찾고,\n해질녘 거리를 거닐다." },
-    p3: { ja: "各フロアはすべて独立したプライベート空間。\n自分たちだけの「沖縄の家」で、\n自由きままな時間をお過ごしください。", en: "Each floor is a completely private space.\nYour very own \"Okinawan home\" —\nenjoy your time in total freedom.", "zh-cn": "每层楼都是完全独立的私人空间。\n在属于您的‘冲绳之家’，\n自由自在地度过美好时光。", "zh-tw": "每層樓都是完全獨立的私人空間。\n在屬於您的「沖繩之家」，\n自由自在地度過美好時光。", ko: "각 층은 완전히 독립된 프라이빗 공간.\n나만의 '오키나와 집'에서\n자유롭게 시간을 보내세요." },
+    p3: { ja: "各フロアはすべて独立したプライベート空間。\n自分たちだけの「沖縄の家」で、\n自由きままな時間をお過ごしください。", en: "Each floor is a completely private space.\nYour very own \"Okinawan home\" —\nenjoy your time in total freedom.", "zh-cn": "每层楼都是完全独立的私人空间。\n在属于您的'冲绳之家'，\n自由自在地度过美好时光。", "zh-tw": "每層樓都是完全獨立的私人空間。\n在屬於您的「沖繩之家」，\n自由自在地度過美好時光。", ko: "각 층은 완전히 독립된 프라이빗 공간.\n나만의 '오키나와 집'에서\n자유롭게 시간을 보내세요." },
     p4: { ja: "美栄橋駅まで徒歩1分、国際通りまで徒歩8分。\n離島へのフェリーが発着するとまりんまで、徒歩9分。", en: "1 min walk to Miebashi Station, 8 min to Kokusai Street.\n9 min walk to Tomarin ferry terminal for the outer islands.", "zh-cn": "步行1分钟到美荣桥站，8分钟到国际通。\n步行9分钟到泊港离岛渡轮码头。", "zh-tw": "步行1分鐘到美榮橋站，8分鐘到國際通。\n步行9分鐘到泊港離島渡輪碼頭。", ko: "미에바시역 도보 1분, 고쿠사이도리 도보 8분.\n이도행 페리터미널 토마린까지 도보 9분." },
     p5: { ja: "街歩きも、離島めぐりも、ぜんぶここから。\nここが、あなたの沖縄の拠点になる。", en: "City walks, island hopping — it all starts here.\nThis is your base in Okinawa.", "zh-cn": "逛街、跳岛，一切从这里开始。\n这里，是您的冲绳据点。", "zh-tw": "逛街、跳島，一切從這裡開始。\n這裡，是您的沖繩據點。", ko: "거리 산책도, 이도 투어도, 전부 여기서.\n여기가 당신의 오키나와 거점이 됩니다." },
   },
@@ -34,6 +34,7 @@ export const translations = {
     viewRooms: { ja: "お部屋を見る", en: "View rooms", "zh-cn": "查看房间", "zh-tw": "查看房間", ko: "객실 보기" },
     location: { ja: "沖縄県那覇市・美栄橋", en: "Miebashi, Naha, Okinawa", "zh-cn": "冲绳县那霸市・美荣桥", "zh-tw": "沖繩縣那霸市・美榮橋", ko: "오키나와현 나하시・미에바시" },
     station: { ja: "美栄橋駅（ゆいレール）より徒歩約1分", en: "1 min walk from Miebashi Station (Yui Rail)", "zh-cn": "从美荣桥站（单轨电车）步行约1分钟", "zh-tw": "從美榮橋站（單軌電車）步行約1分鐘", ko: "미에바시역(유이레일) 도보 약 1분" },
+  },
   roomsPage: {
     label: { ja: "Our Spaces", en: "Our Spaces", "zh-cn": "Our Spaces", "zh-tw": "Our Spaces", ko: "Our Spaces" },
     title: { ja: "お部屋", en: "Rooms", "zh-cn": "房间", "zh-tw": "房間", ko: "객실" },
