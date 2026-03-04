@@ -4,7 +4,6 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* ===== SUNZ ROOMS ブランドカラー ===== */
   --background: #FAF8F5;
   --foreground: #2C2C2C;
   --card: #FFFFFF;
