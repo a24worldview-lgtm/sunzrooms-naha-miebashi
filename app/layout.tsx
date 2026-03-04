@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { DM_Sans, Noto_Sans_JP } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { LanguageProvider } from "@/lib/language-context";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -52,7 +53,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" className={`${dmSans.variable} ${notoSansJP.variable}`}>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        <LanguageProvider>{children}</LanguageProvider>
+      </body>
       <Analytics />
     </html>
   );

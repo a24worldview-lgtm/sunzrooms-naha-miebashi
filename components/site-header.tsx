@@ -5,21 +5,29 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/lib/language-context";
+import { translations as t } from "@/lib/i18n";
 
 const navLinks = [
-  { href: "/", label: "ホーム" },
-  { href: "/rooms", label: "お部屋" },
-  { href: "/booking", label: "ご予約" },
-  { href: "/access", label: "アクセス" },
+  { href: "/", key: "home" as const },
+  { href: "/rooms", key: "rooms" as const },
+  { href: "/booking", key: "booking" as const },
+  { href: "/access", key: "access" as const },
 ];
 
-const languages = ["JP", "EN", "ZH", "KO"];
+const languages = [
+  { code: "ja" as const, label: "JP" },
+  { code: "en" as const, label: "EN" },
+  { code: "zh-cn" as const, label: "简" },
+  { code: "zh-tw" as const, label: "繁" },
+  { code: "ko" as const, label: "KO" },
+];
 
 export function SiteHeader() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeLang, setActiveLang] = useState("JP");
+  const { locale, setLocale } = useLanguage();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -32,8 +40,6 @@ export function SiteHeader() {
   }, [pathname]);
 
   const isHome = pathname === "/";
-
-  // On non-home pages, always use light background for readability
   const useTransparent = isHome && !scrolled;
 
   return (
@@ -46,11 +52,10 @@ export function SiteHeader() {
       )}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
-        {/* Logo */}
         <Link
           href="/"
           className="flex flex-col leading-none tracking-wider"
-          aria-label="SUNZROOMS ホーム"
+          aria-label="SUNZ ROOMS. ホーム"
         >
           <span
             className={cn(
@@ -70,7 +75,6 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        {/* Desktop nav */}
         <div className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
             <Link
@@ -87,33 +91,31 @@ export function SiteHeader() {
                     : "text-charcoal/70 hover:text-charcoal"
               )}
             >
-              {link.label}
+              {t.nav[link.key][locale]}
             </Link>
           ))}
 
-          {/* Language switcher */}
           <div className="flex items-center gap-1 rounded-full border border-border/30 bg-card/20 px-1 py-0.5 backdrop-blur-sm">
             {languages.map((lang) => (
               <button
-                key={lang}
-                onClick={() => setActiveLang(lang)}
+                key={lang.code}
+                onClick={() => setLocale(lang.code)}
                 className={cn(
                   "rounded-full px-2 py-0.5 text-[11px] tracking-wide transition-all duration-200",
-                  activeLang === lang
+                  locale === lang.code
                     ? "bg-primary text-primary-foreground"
                     : useTransparent
                       ? "text-primary-foreground/60 hover:text-primary-foreground"
                       : "text-charcoal/60 hover:text-charcoal"
                 )}
-                aria-label={`言語を${lang}に切替`}
+                aria-label={`言語を${lang.label}に切替`}
               >
-                {lang}
+                {lang.label}
               </button>
             ))}
           </div>
         </div>
 
-        {/* Mobile menu button */}
         <button
           className={cn(
             "md:hidden transition-colors",
@@ -127,7 +129,6 @@ export function SiteHeader() {
         </button>
       </nav>
 
-      {/* Mobile menu */}
       <div
         className={cn(
           "overflow-hidden transition-all duration-300 md:hidden",
@@ -146,23 +147,23 @@ export function SiteHeader() {
                   : "text-charcoal/70"
               )}
             >
-              {link.label}
+              {t.nav[link.key][locale]}
             </Link>
           ))}
           <div className="mt-4 flex items-center gap-2">
             {languages.map((lang) => (
               <button
-                key={lang}
-                onClick={() => setActiveLang(lang)}
+                key={lang.code}
+                onClick={() => setLocale(lang.code)}
                 className={cn(
                   "rounded-full px-3 py-1 text-xs tracking-wide transition-all",
-                  activeLang === lang
+                  locale === lang.code
                     ? "bg-primary text-primary-foreground"
                     : "text-charcoal/60 bg-secondary"
                 )}
-                aria-label={`言語を${lang}に切替`}
+                aria-label={`言語を${lang.label}に切替`}
               >
-                {lang}
+                {lang.label}
               </button>
             ))}
           </div>

@@ -1,6 +1,20 @@
+"use client";
+
 import { ScrollReveal } from "@/components/scroll-reveal";
+import { useLanguage } from "@/lib/language-context";
+import { translations as t } from "@/lib/i18n";
 
 export function ConceptSection() {
+  const { locale } = useLanguage();
+
+  const renderLines = (text: string) =>
+    text.split("\n").map((line, i, arr) => (
+      <span key={i}>
+        {line}
+        {i < arr.length - 1 && <br />}
+      </span>
+    ));
+
   return (
     <section
       id="concept"
@@ -9,7 +23,7 @@ export function ConceptSection() {
     >
       <ScrollReveal>
         <p className="text-xs font-medium uppercase tracking-[0.3em] text-primary">
-          コンセプト
+          {t.concept.label[locale]}
         </p>
       </ScrollReveal>
 
@@ -18,45 +32,30 @@ export function ConceptSection() {
           id="concept-heading"
           className="mt-8 text-balance text-3xl font-light leading-relaxed text-charcoal md:text-4xl lg:text-5xl"
         >
-          暮らすように、泊まる。
+          {t.concept.heading[locale]}
         </h2>
       </ScrollReveal>
 
       <ScrollReveal delay={200}>
         <div className="mx-auto mt-10 max-w-2xl space-y-6">
           <p className="text-base leading-[2] text-muted-foreground md:text-lg">
-            ただ泊まるだけの場所ではなく、
-            <br />
-            まるでこの街に暮らしているかのように過ごせる宿。
+            {renderLines(t.concept.p1[locale])}
           </p>
           <p className="text-base leading-[2] text-muted-foreground md:text-lg">
-            キッチンで朝ごはんをつくり、
-            <br />
-            お気に入りのカフェを見つけ、
-            <br />
-            夕暮れの街をふらりと歩く。
+            {renderLines(t.concept.p2[locale])}
           </p>
           <p className="text-base leading-[2] text-muted-foreground md:text-lg">
-            各フロアはすべて独立したプライベート空間。
-            <br />
-            自分たちだけの「沖縄の家」で、
-            <br />
-            自由きままな時間をお過ごしください。
+            {renderLines(t.concept.p3[locale])}
           </p>
           <p className="text-base leading-[2] text-muted-foreground md:text-lg">
-            美栄橋駅まで徒歩1分、国際通りまで徒歩8分。
-            <br />
-            離島へのフェリーが発着するとまりんまで、徒歩9分。
+            {renderLines(t.concept.p4[locale])}
           </p>
           <p className="text-base font-medium leading-[2] text-charcoal md:text-lg">
-            街歩きも、離島めぐりも、ぜんぶここから。
-            <br />
-            ここが、あなたの沖縄の拠点になる。
+            {renderLines(t.concept.p5[locale])}
           </p>
         </div>
       </ScrollReveal>
 
-      {/* Decorative arch divider */}
       <ScrollReveal delay={300}>
         <div className="mx-auto mt-12 flex justify-center">
           <div className="h-16 w-28 rounded-t-full border-2 border-b-0 border-secondary" />

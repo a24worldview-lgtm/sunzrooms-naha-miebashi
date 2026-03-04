@@ -1,8 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import { MapPin, Train } from "lucide-react";
 import { ScrollReveal } from "@/components/scroll-reveal";
+import { useLanguage } from "@/lib/language-context";
+import { translations as t } from "@/lib/i18n";
 
 export function CTASection() {
+  const { locale } = useLanguage();
+
   return (
     <section className="px-5 py-24 lg:px-8 lg:py-32" aria-labelledby="cta-heading">
       <div className="mx-auto max-w-4xl text-center">
@@ -11,7 +17,7 @@ export function CTASection() {
             id="cta-heading"
             className="text-balance text-2xl font-light text-charcoal md:text-3xl lg:text-4xl"
           >
-            沖縄の旅が、ここから始まる。
+            {t.cta.heading[locale]}
           </h2>
         </ScrollReveal>
 
@@ -21,30 +27,29 @@ export function CTASection() {
               href="/booking"
               className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-3.5 text-sm font-medium tracking-wide text-primary-foreground transition-all hover:bg-wood-dark hover:shadow-lg"
             >
-              ご予約はこちら
+              {t.cta.bookNow[locale]}
             </Link>
             <Link
               href="/rooms"
               className="inline-flex items-center justify-center rounded-full border border-border bg-card px-8 py-3.5 text-sm font-medium tracking-wide text-charcoal transition-all hover:bg-secondary"
             >
-              お部屋を見る
+              {t.cta.viewRooms[locale]}
             </Link>
           </div>
         </ScrollReveal>
 
-        {/* Location teaser */}
         <ScrollReveal delay={400}>
           <div className="mx-auto mt-16 max-w-md rounded-2xl border border-border bg-card p-6">
             <div className="flex items-center justify-center gap-2 text-primary">
               <MapPin size={18} />
               <span className="text-sm font-medium tracking-wide">
-                沖縄県那覇市・美栄橋
+                {t.cta.location[locale]}
               </span>
             </div>
             <div className="mt-3 flex items-center justify-center gap-2 text-muted-foreground">
               <Train size={14} />
               <span className="text-sm">
-                美栄橋駅（ゆいレール）より徒歩約1分
+                {t.cta.station[locale]}
               </span>
             </div>
           </div>
