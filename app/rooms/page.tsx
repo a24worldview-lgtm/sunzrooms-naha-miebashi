@@ -32,6 +32,7 @@ export default function RoomsPage() {
         "/images/1f-bedroom.jpg",
         "/images/1f-bathroom.jpg",
         "/images/1f-kitchen.jpg",
+        "/images/1f-floorplan.jpg",
       ],
     },
     {
@@ -54,6 +55,7 @@ export default function RoomsPage() {
         "/images/2f-loft-bed.jpg",
         "/images/2f-kitchen.jpg",
         "/images/2f-tatami.jpg",
+        "/images/2f-floorplan.jpg",
       ],
     },
     {
@@ -76,6 +78,7 @@ export default function RoomsPage() {
         "/images/3f-loft-bed.jpg",
         "/images/3f-bathroom.jpg",
         "/images/3f-living.jpg",
+        "/images/3f-floorplan.jpg",
       ],
     },
   ];
