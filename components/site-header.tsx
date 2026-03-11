@@ -13,6 +13,7 @@ const navLinks = [
   { href: "/rooms", key: "rooms" as const },
   { href: "/booking", key: "booking" as const },
   { href: "/access", key: "access" as const },
+  { href: "/faq", key: "faq" as const },
 ];
 
 const languages = [
