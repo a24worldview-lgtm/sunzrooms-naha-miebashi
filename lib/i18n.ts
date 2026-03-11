@@ -214,11 +214,11 @@ export const translations = {
           ko: "체크인 전에 짐을 맡길 수 있나요?",
         },
         a: {
-          ja: "はい、チェックイン前の荷物のお預かりが可能です。事前にメッセージにてご連絡ください。なお、チェックアウト後のお預かりには対応しておりません。",
-          en: "Yes, you can leave your luggage before check-in. Please contact us in advance via message. Please note that luggage storage after check-out is not available.",
-          "zh-cn": "可以。入住前可以寄存行李，请提前通过消息联系我们。退房后无法寄存行李，敬请谅解。",
-          "zh-tw": "可以。入住前可以寄放行李，請提前透過訊息聯繫我們。退房後無法寄放行李，敬請見諒。",
-          ko: "네, 체크인 전 짐 보관이 가능합니다. 사전에 메시지로 연락해 주세요. 체크아웃 후 짐 보관은 불가하오니 양해 부탁드립니다.",
+          ja: "午前11時以降でしたら、お部屋にてお荷物のお預かりが可能です。ご希望の方は事前にメッセージにてご連絡ください。なお、チェックアウト後のお預かりには対応しておりません。",
+          en: "Luggage can be left in your room from 11:00 AM onward. Please contact us in advance via message if you wish to do so. Please note that luggage storage after check-out is not available.",
+          "zh-cn": "上午11点以后可以将行李放在房间内。如有需要，请提前通过消息联系我们。退房后无法寄存行李，敬请谅解。",
+          "zh-tw": "上午11點以後可以將行李放在房間內。如有需要，請提前透過訊息聯繫我們。退房後無法寄放行李，敬請見諒。",
+          ko: "오전 11시 이후부터 객실에 짐을 맡기실 수 있습니다. 희망하시는 분은 사전에 메시지로 연락해 주세요. 체크아웃 후 짐 보관은 불가하오니 양해 부탁드립니다.",
         },
       },
       {
