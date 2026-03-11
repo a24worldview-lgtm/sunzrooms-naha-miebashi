@@ -6,8 +6,8 @@ export const translations = {
     rooms: { ja: "お部屋", en: "Rooms", "zh-cn": "房间", "zh-tw": "房間", ko: "객실" },
     booking: { ja: "ご予約", en: "Booking", "zh-cn": "预订", "zh-tw": "訂房", ko: "예약" },
     access: { ja: "アクセス", en: "Access", "zh-cn": "交通", "zh-tw": "交通", ko: "오시는 길" },
+    faq: { ja: "FAQ", en: "FAQ", "zh-cn": "常见问题", "zh-tw": "常見問題", ko: "FAQ" },
   },
-  faq: { ja: "FAQ", en: "FAQ", "zh-cn": "常见问题", "zh-tw": "常見問題", ko: "FAQ" },
   concept: {
     label: { ja: "コンセプト", en: "Concept", "zh-cn": "理念", "zh-tw": "理念", ko: "콘셉트" },
     heading: { ja: "暮らすように、泊まる。", en: "Live as you stay.", "zh-cn": "像生活一样，住下来。", "zh-tw": "像生活一樣，住下來。", ko: "살듯이, 머무르다." },
@@ -119,24 +119,6 @@ export const translations = {
       ko: [{ name: "가장 가까운 편의점", time: "도보 1분" }, { name: "고쿠사이도리", time: "도보 8분" }, { name: "돈키호테 고쿠사이도리점", time: "도보 9분" }, { name: "마키시 공설시장", time: "도보 11분" }, { name: "토마린 (이도행 페리터미널)", time: "도보 9분" }],
     },
   },
-  // =====================================================================
-//  i18n.ts への追加手順
-// =====================================================================
-//
-//  1. nav セクション（9行目付近）に faq を追加:
-//
-//     nav: {
-//       home: { ... },
-//       rooms: { ... },
-//       booking: { ... },
-//       access: { ... },
-//       faq: { ja: "FAQ", en: "FAQ", "zh-cn": "常见问题", "zh-tw": "常見問題", ko: "FAQ" },
-//     },
-//
-//  2. footer セクション（121行目付近）の直前に、以下の faqPage セクションを追加
-//
-// =====================================================================
-
   faqPage: {
     label: { ja: "FAQ", en: "FAQ", "zh-cn": "FAQ", "zh-tw": "FAQ", ko: "FAQ" },
     title: { ja: "よくあるご質問", en: "Frequently Asked Questions", "zh-cn": "常见问题", "zh-tw": "常見問題", ko: "자주 묻는 질문" },
@@ -171,7 +153,6 @@ export const translations = {
       },
     },
     items: [
-      // ── チェックイン・アクセス ──
       {
         category: "checkin",
         q: {
@@ -223,7 +204,6 @@ export const translations = {
           ko: "전용 주차장은 없습니다. 도보 거리에 여러 유료 주차장이 있으니 이용해 주세요.",
         },
       },
-      // ── お部屋・設備 ──
       {
         category: "room",
         q: {
@@ -326,7 +306,6 @@ export const translations = {
           ko: "잠옷은 제공되지 않습니다. 번거로우시겠지만 직접 지참해 주시기 바랍니다.",
         },
       },
-      // ── 周辺環境・ルール ──
       {
         category: "neighborhood",
         q: {
@@ -363,7 +342,6 @@ export const translations = {
       },
     ],
   },
-
   footer: {
     address: { ja: "沖縄県那覇市前島1丁目1-13", en: "1-1-13 Maejima, Naha, Okinawa", "zh-cn": "冲绳县那霸市前岛1丁目1-13", "zh-tw": "沖繩縣那霸市前島1丁目1-13", ko: "오키나와현 나하시 마에지마 1초메 1-13" },
     navigation: { ja: "ナビゲーション", en: "Navigation", "zh-cn": "导航", "zh-tw": "導覽", ko: "내비게이션" },
