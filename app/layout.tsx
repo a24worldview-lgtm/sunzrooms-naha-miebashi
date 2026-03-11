@@ -99,8 +99,8 @@ const structuredData = {
         latitude: 26.2206,
         longitude: 127.6781,
       },
-      checkinTime: "16:00",
-      checkoutTime: "10:00",
+      checkinTime: "15:00",
+      checkoutTime: "11:00",
       numberOfRooms: 3,
       amenityFeature: [
         { "@type": "LocationFeatureSpecification", name: "Wi-Fi", value: true },
@@ -224,7 +224,7 @@ const structuredData = {
           name: "チェックイン・チェックアウトの時間は？",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "チェックインは16:00から、チェックアウトは10:00までです。",
+            text: "チェックインは15:00から、チェックアウトは11:00までです。",
           },
         },
         {
@@ -256,7 +256,7 @@ const structuredData = {
           name: "What are the check-in and check-out times?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Check-in is from 4:00 PM and check-out is by 10:00 AM.",
+            text: "Check-in is from 3:00 PM and check-out is by 11:00 AM.",
           },
         },
         {
