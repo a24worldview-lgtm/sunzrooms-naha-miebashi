@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { useLanguage } from "@/lib/language-context";
 import { translations, t } from "@/lib/i18n";
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
 
 type FAQItem = {
   category: string;
@@ -81,58 +83,58 @@ export default function FAQPage() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  // グローバルindexを追跡するカウンター
   let globalIndex = 0;
 
   return (
-    <main className="min-h-screen bg-[#FAF8F5]">
-      {/* ヘッダースペーサー（既存のナビゲーション分） */}
-      <div className="pt-24 sm:pt-32" />
+    <>
+      <SiteHeader />
+      <main className="min-h-screen bg-[#FAF8F5]">
+        <div className="pt-24 sm:pt-32" />
 
-      <div className="max-w-2xl mx-auto px-5 sm:px-8 pb-20 sm:pb-32">
-        {/* ページヘッダー */}
-        <div className="mb-12 sm:mb-16">
-          <p className="text-xs tracking-[0.2em] uppercase text-[#b0a99f] mb-3">
-            {t(faq.label, locale)}
-          </p>
-          <h1 className="text-2xl sm:text-3xl font-semibold text-[#2c2c2c] mb-3">
-            {t(faq.title, locale)}
-          </h1>
-          <p className="text-sm sm:text-[15px] text-[#6b6560] leading-relaxed">
-            {t(faq.subtitle, locale)}
-          </p>
+        <div className="max-w-2xl mx-auto px-5 sm:px-8 pb-20 sm:pb-32">
+          <div className="mb-12 sm:mb-16">
+            <p className="text-xs tracking-[0.2em] uppercase text-[#b0a99f] mb-3">
+              {t(faq.label, locale)}
+            </p>
+            <h1 className="text-2xl sm:text-3xl font-semibold text-[#2c2c2c] mb-3">
+              {t(faq.title, locale)}
+            </h1>
+            <p className="text-sm sm:text-[15px] text-[#6b6560] leading-relaxed">
+              {t(faq.subtitle, locale)}
+            </p>
+          </div>
+
+          {categoryOrder.map((catKey) => {
+            const catItems = items.filter((item) => item.category === catKey);
+            if (catItems.length === 0) return null;
+
+            const startIndex = globalIndex;
+
+            return (
+              <section key={catKey} className="mb-10 sm:mb-14">
+                <h2 className="text-xs tracking-[0.15em] uppercase text-[#b0a99f] mb-4 sm:mb-5">
+                  {t(categories[catKey], locale)}
+                </h2>
+                <div>
+                  {catItems.map((item, i) => {
+                    const idx = startIndex + i;
+                    globalIndex = startIndex + i + 1;
+                    return (
+                      <AccordionItem
+                        key={idx}
+                        item={item}
+                        isOpen={openIndex === idx}
+                        onToggle={() => handleToggle(idx)}
+                      />
+                    );
+                  })}
+                </div>
+              </section>
+            );
+          })}
         </div>
-
-        {/* カテゴリ別FAQ */}
-        {categoryOrder.map((catKey) => {
-          const catItems = items.filter((item) => item.category === catKey);
-          if (catItems.length === 0) return null;
-
-          const startIndex = globalIndex;
-
-          return (
-            <section key={catKey} className="mb-10 sm:mb-14">
-              <h2 className="text-xs tracking-[0.15em] uppercase text-[#b0a99f] mb-4 sm:mb-5">
-                {t(categories[catKey], locale)}
-              </h2>
-              <div>
-                {catItems.map((item, i) => {
-                  const idx = startIndex + i;
-                  globalIndex = startIndex + i + 1;
-                  return (
-                    <AccordionItem
-                      key={idx}
-                      item={item}
-                      isOpen={openIndex === idx}
-                      onToggle={() => handleToggle(idx)}
-                    />
-                  );
-                })}
-              </div>
-            </section>
-          );
-        })}
-      </div>
-    </main>
+      </main>
+      <SiteFooter />
+    </>
   );
 }
