@@ -7,6 +7,7 @@ export const translations = {
     booking: { ja: "ご予約", en: "Booking", "zh-cn": "预订", "zh-tw": "訂房", ko: "예약" },
     access: { ja: "アクセス", en: "Access", "zh-cn": "交通", "zh-tw": "交通", ko: "오시는 길" },
   },
+  faq: { ja: "FAQ", en: "FAQ", "zh-cn": "常见问题", "zh-tw": "常見問題", ko: "FAQ" },
   concept: {
     label: { ja: "コンセプト", en: "Concept", "zh-cn": "理念", "zh-tw": "理念", ko: "콘셉트" },
     heading: { ja: "暮らすように、泊まる。", en: "Live as you stay.", "zh-cn": "像生活一样，住下来。", "zh-tw": "像生活一樣，住下來。", ko: "살듯이, 머무르다." },
@@ -118,6 +119,251 @@ export const translations = {
       ko: [{ name: "가장 가까운 편의점", time: "도보 1분" }, { name: "고쿠사이도리", time: "도보 8분" }, { name: "돈키호테 고쿠사이도리점", time: "도보 9분" }, { name: "마키시 공설시장", time: "도보 11분" }, { name: "토마린 (이도행 페리터미널)", time: "도보 9분" }],
     },
   },
+  // =====================================================================
+//  i18n.ts への追加手順
+// =====================================================================
+//
+//  1. nav セクション（9行目付近）に faq を追加:
+//
+//     nav: {
+//       home: { ... },
+//       rooms: { ... },
+//       booking: { ... },
+//       access: { ... },
+//       faq: { ja: "FAQ", en: "FAQ", "zh-cn": "常见问题", "zh-tw": "常見問題", ko: "FAQ" },
+//     },
+//
+//  2. footer セクション（121行目付近）の直前に、以下の faqPage セクションを追加
+//
+// =====================================================================
+
+  faqPage: {
+    label: { ja: "FAQ", en: "FAQ", "zh-cn": "FAQ", "zh-tw": "FAQ", ko: "FAQ" },
+    title: { ja: "よくあるご質問", en: "Frequently Asked Questions", "zh-cn": "常见问题", "zh-tw": "常見問題", ko: "자주 묻는 질문" },
+    subtitle: {
+      ja: "ご滞在前に知っておきたい情報をまとめました。",
+      en: "Everything you need to know before your stay.",
+      "zh-cn": "入住前您需要了解的信息汇总。",
+      "zh-tw": "入住前您需要了解的資訊彙整。",
+      ko: "숙박 전 알아두시면 좋은 정보를 정리했습니다.",
+    },
+    categories: {
+      checkin: {
+        ja: "チェックイン・アクセス",
+        en: "Check-in & Access",
+        "zh-cn": "入住与交通",
+        "zh-tw": "入住與交通",
+        ko: "체크인・교통",
+      },
+      room: {
+        ja: "お部屋・設備",
+        en: "Room & Facilities",
+        "zh-cn": "房间与设施",
+        "zh-tw": "房間與設施",
+        ko: "객실・시설",
+      },
+      neighborhood: {
+        ja: "周辺環境・ルール",
+        en: "Neighborhood & Rules",
+        "zh-cn": "周边环境与规定",
+        "zh-tw": "周邊環境與規定",
+        ko: "주변 환경・규칙",
+      },
+    },
+    items: [
+      // ── チェックイン・アクセス ──
+      {
+        category: "checkin",
+        q: {
+          ja: "チェックイン・チェックアウトの時間は？",
+          en: "What are the check-in and check-out times?",
+          "zh-cn": "入住和退房时间是几点？",
+          "zh-tw": "入住和退房時間是幾點？",
+          ko: "체크인・체크아웃 시간은 언제인가요?",
+        },
+        a: {
+          ja: "チェックインは15:00から、チェックアウトは11:00までです。",
+          en: "Check-in is from 3:00 PM and check-out is by 11:00 AM.",
+          "zh-cn": "入住时间为下午3:00起，退房时间为上午11:00前。",
+          "zh-tw": "入住時間為下午3:00起，退房時間為上午11:00前。",
+          ko: "체크인은 오후 3시부터, 체크아웃은 오전 11시까지입니다.",
+        },
+      },
+      {
+        category: "checkin",
+        q: {
+          ja: "深夜のチェックインは可能ですか？",
+          en: "Is late-night check-in available?",
+          "zh-cn": "可以深夜入住吗？",
+          "zh-tw": "可以深夜入住嗎？",
+          ko: "심야 체크인이 가능한가요?",
+        },
+        a: {
+          ja: "はい、スマートロックによる無人チェックインを採用しているため、24時間いつでもご入室可能です。",
+          en: "Yes. We use a smart lock for self check-in, so you can enter anytime 24 hours a day.",
+          "zh-cn": "可以。我们采用智能门锁自助入住，您可以24小时随时进入。",
+          "zh-tw": "可以。我們採用智慧門鎖自助入住，您可以24小時隨時進入。",
+          ko: "네, 스마트 잠금장치를 통한 셀프 체크인 방식이므로 24시간 언제든 입실 가능합니다.",
+        },
+      },
+      {
+        category: "checkin",
+        q: {
+          ja: "駐車場はありますか？",
+          en: "Is parking available?",
+          "zh-cn": "有停车场吗？",
+          "zh-tw": "有停車場嗎？",
+          ko: "주차장이 있나요?",
+        },
+        a: {
+          ja: "専用駐車場はございません。徒歩圏内に複数のコインパーキングがございますので、そちらをご利用ください。",
+          en: "We do not have a private parking lot. There are several coin-operated parking lots within walking distance.",
+          "zh-cn": "本馆没有专用停车场。步行范围内有多个投币式停车场，请您利用。",
+          "zh-tw": "本館沒有專用停車場。步行範圍內有多個投幣式停車場，請您利用。",
+          ko: "전용 주차장은 없습니다. 도보 거리에 여러 유료 주차장이 있으니 이용해 주세요.",
+        },
+      },
+      // ── お部屋・設備 ──
+      {
+        category: "room",
+        q: {
+          ja: "各フロアは独立したプライベート空間ですか？",
+          en: "Is each floor a separate private space?",
+          "zh-cn": "每层楼都是独立的私人空间吗？",
+          "zh-tw": "每層樓都是獨立的私人空間嗎？",
+          ko: "각 층은 독립된 프라이빗 공간인가요?",
+        },
+        a: {
+          ja: "はい。各フロアはすべて独立したプライベート空間で、専用のキッチン・バスルーム・トイレを完備しています。他のゲストと共有するスペースはありません。",
+          en: "Yes. Each floor is a completely private space with its own kitchen, bathroom, and toilet. There are no shared spaces with other guests.",
+          "zh-cn": "是的。每层楼都是完全独立的私人空间，配备专用厨房、浴室和卫生间。与其他客人没有共用区域。",
+          "zh-tw": "是的。每層樓都是完全獨立的私人空間，配備專用廚房、浴室和衛生間。與其他房客沒有共用區域。",
+          ko: "네. 각 층은 완전히 독립된 프라이빗 공간으로, 전용 주방・욕실・화장실을 완비하고 있습니다. 다른 게스트와 공유하는 공간은 없습니다.",
+        },
+      },
+      {
+        category: "room",
+        q: {
+          ja: "3階建てとのことですが、エレベーターはありますか？",
+          en: "The building has 3 floors — is there an elevator?",
+          "zh-cn": "建筑有3层，有电梯吗？",
+          "zh-tw": "建築有3層，有電梯嗎？",
+          ko: "3층 건물인데, 엘리베이터가 있나요?",
+        },
+        a: {
+          ja: "エレベーターはございません。各フロアへは階段でのアクセスとなります。大きなお荷物がある場合は、1階のスペースもご活用いただけます。",
+          en: "There is no elevator. Access to each floor is by stairs. If you have large luggage, you are welcome to use the ground floor space.",
+          "zh-cn": "没有电梯。各楼层需通过楼梯进出。如果您有大件行李，可以利用1楼的空间。",
+          "zh-tw": "沒有電梯。各樓層需通過樓梯進出。如果您有大件行李，可以利用1樓的空間。",
+          ko: "엘리베이터는 없습니다. 각 층은 계단으로 이동합니다. 큰 짐이 있으시면 1층 공간을 활용하실 수 있습니다.",
+        },
+      },
+      {
+        category: "room",
+        q: {
+          ja: "自炊はできますか？調理器具はありますか？",
+          en: "Can I cook? Are there cooking utensils?",
+          "zh-cn": "可以自己做饭吗？有烹饪用具吗？",
+          "zh-tw": "可以自己做飯嗎？有烹飪用具嗎？",
+          ko: "직접 요리할 수 있나요? 조리기구가 있나요?",
+        },
+        a: {
+          ja: "はい、フライパン、鍋、電子レンジ、基本的な食器類をご用意しております。周辺のスーパーで食材を購入して自炊をお楽しみいただけます。",
+          en: "Yes. We provide a frying pan, pot, microwave, and basic tableware. You can buy ingredients at nearby supermarkets and enjoy cooking.",
+          "zh-cn": "可以。我们提供平底锅、锅、微波炉和基本餐具。您可以在附近超市购买食材享受烹饪。",
+          "zh-tw": "可以。我們提供平底鍋、鍋、微波爐和基本餐具。您可以在附近超市購買食材享受烹飪。",
+          ko: "네. 프라이팬, 냄비, 전자레인지, 기본 식기류를 준비하고 있습니다. 주변 슈퍼에서 식재료를 구입하여 직접 요리를 즐기실 수 있습니다.",
+        },
+      },
+      {
+        category: "room",
+        q: {
+          ja: "洗濯機は無料で使えますか？洗剤はありますか？",
+          en: "Is the washing machine free to use? Is detergent provided?",
+          "zh-cn": "洗衣机可以免费使用吗？有洗涤剂吗？",
+          "zh-tw": "洗衣機可以免費使用嗎？有洗滌劑嗎？",
+          ko: "세탁기는 무료로 사용할 수 있나요? 세제가 있나요?",
+        },
+        a: {
+          ja: "はい、無料でご利用いただける洗濯機・乾燥機と洗濯用洗剤を各フロアに完備しております。",
+          en: "Yes. Each floor is equipped with a free washer, dryer, and laundry detergent.",
+          "zh-cn": "可以。每层楼都配备了免费洗衣机、烘干机和洗涤剂。",
+          "zh-tw": "可以。每層樓都配備了免費洗衣機、烘乾機和洗滌劑。",
+          ko: "네. 각 층에 무료로 이용 가능한 세탁기・건조기와 세탁 세제를 완비하고 있습니다.",
+        },
+      },
+      {
+        category: "room",
+        q: {
+          ja: "タオルは何枚ありますか？",
+          en: "How many towels are provided?",
+          "zh-cn": "提供几条毛巾？",
+          "zh-tw": "提供幾條毛巾？",
+          ko: "타올은 몇 장 제공되나요?",
+        },
+        a: {
+          ja: "お一人様につきバスタオル・フェイスタオル・ボディスポンジ各1点のセットをご用意しております。連泊の場合も1セットのみのご提供となりますので、各フロアの洗濯乾燥機をご活用ください。",
+          en: "We provide one set per guest: a bath towel, face towel, and body sponge. Only one set is provided even for multi-night stays, so please make use of the washer and dryer on each floor.",
+          "zh-cn": "每位客人提供一套：浴巾、面巾和沐浴海绵各一条。连住多晚也只提供一套，请利用各楼层的洗衣烘干机。",
+          "zh-tw": "每位房客提供一套：浴巾、面巾和沐浴海綿各一條。連住多晚也只提供一套，請利用各樓層的洗衣烘乾機。",
+          ko: "1인당 바스타올・페이스타올・바디스펀지 각 1개 세트를 제공합니다. 연박 시에도 1세트만 제공되오니, 각 층의 세탁건조기를 활용해 주세요.",
+        },
+      },
+      {
+        category: "room",
+        q: {
+          ja: "パジャマ（寝巻き）はありますか？",
+          en: "Are pajamas provided?",
+          "zh-cn": "提供睡衣吗？",
+          "zh-tw": "提供睡衣嗎？",
+          ko: "잠옷이 제공되나요?",
+        },
+        a: {
+          ja: "パジャマのご用意はございません。恐れ入りますが、ご自身でご持参いただくようお願いいたします。",
+          en: "Pajamas are not provided. We kindly ask that you bring your own.",
+          "zh-cn": "不提供睡衣。烦请您自行携带。",
+          "zh-tw": "不提供睡衣。煩請您自行攜帶。",
+          ko: "잠옷은 제공되지 않습니다. 번거로우시겠지만 직접 지참해 주시기 바랍니다.",
+        },
+      },
+      // ── 周辺環境・ルール ──
+      {
+        category: "neighborhood",
+        q: {
+          ja: "近くに買い出しできる場所はありますか？",
+          en: "Are there shops nearby for groceries?",
+          "zh-cn": "附近有可以购物的地方吗？",
+          "zh-tw": "附近有可以購物的地方嗎？",
+          ko: "근처에 장을 볼 수 있는 곳이 있나요?",
+        },
+        a: {
+          ja: "徒歩3分圏内に24時間営業のスーパーとコンビニがございます。",
+          en: "There is a 24-hour supermarket and a convenience store within a 3-minute walk.",
+          "zh-cn": "步行3分钟内有24小时营业的超市和便利店。",
+          "zh-tw": "步行3分鐘內有24小時營業的超市和便利商店。",
+          ko: "도보 3분 거리에 24시간 슈퍼마켓과 편의점이 있습니다.",
+        },
+      },
+      {
+        category: "neighborhood",
+        q: {
+          ja: "室内で喫煙はできますか？",
+          en: "Is smoking allowed indoors?",
+          "zh-cn": "室内可以吸烟吗？",
+          "zh-tw": "室內可以吸菸嗎？",
+          ko: "실내에서 흡연할 수 있나요?",
+        },
+        a: {
+          ja: "室内は完全禁煙です。電子タバコも含め、固くお断りしております。",
+          en: "Smoking is strictly prohibited indoors, including e-cigarettes.",
+          "zh-cn": "室内完全禁烟，包括电子烟在内一律禁止。",
+          "zh-tw": "室內完全禁菸，包括電子菸在內一律禁止。",
+          ko: "실내는 완전 금연입니다. 전자담배를 포함하여 엄격히 금지하고 있습니다.",
+        },
+      },
+    ],
+  },
+
   footer: {
     address: { ja: "沖縄県那覇市前島1丁目1-13", en: "1-1-13 Maejima, Naha, Okinawa", "zh-cn": "冲绳县那霸市前岛1丁目1-13", "zh-tw": "沖繩縣那霸市前島1丁目1-13", ko: "오키나와현 나하시 마에지마 1초메 1-13" },
     navigation: { ja: "ナビゲーション", en: "Navigation", "zh-cn": "导航", "zh-tw": "導覽", ko: "내비게이션" },
