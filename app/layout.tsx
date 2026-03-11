@@ -79,8 +79,8 @@ const structuredData = {
     {
       "@type": "LodgingBusiness",
       "@id": "https://sunzrooms.com/#lodging",
-      name: "SUNZ ROOMS. naha miebashi",
-      alternateName: "サンズルームズ那覇美栄橋",
+      name: "SUNZ ROOMS.-naha miebashi-",
+      alternateName: "サンズルームス 那覇美栄橋",
       description: "那覇・美栄橋のデザイナーズゲストハウス。各フロアがすべて独立したプライベート空間。暮らすように、泊まる。",
       url: "https://sunzrooms.com",
       telephone: "",
@@ -107,6 +107,7 @@ const structuredData = {
         { "@type": "LocationFeatureSpecification", name: "Kitchen", value: true },
         { "@type": "LocationFeatureSpecification", name: "Air Conditioning", value: true },
         { "@type": "LocationFeatureSpecification", name: "Washing Machine", value: true },
+        { "@type": "LocationFeatureSpecification", name: "Clothes Dryer", value: true },
         { "@type": "LocationFeatureSpecification", name: "TV", value: true },
         { "@type": "LocationFeatureSpecification", name: "Microwave", value: true },
         { "@type": "LocationFeatureSpecification", name: "Hair Dryer", value: true },
@@ -253,6 +254,22 @@ const structuredData = {
         },
         {
           "@type": "Question",
+          name: "エレベーターはありますか？",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "エレベーターはございません。各階までは階段でのご移動となります。",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "洗濯機・乾燥機はありますか？",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "はい。各フロアに洗濯機と乾燥機を完備しています。",
+          },
+        },
+        {
+          "@type": "Question",
           name: "What are the check-in and check-out times?",
           acceptedAnswer: {
             "@type": "Answer",
@@ -265,14 +282,6 @@ const structuredData = {
           acceptedAnswer: {
             "@type": "Answer",
             text: "About 20 minutes by Yui Rail monorail. The nearest station is Miebashi Station, a 1-minute walk from the property.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "エレベーターはありますか？",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "エレベーターはございません。各階までは階段でのご移動となります。",
           },
         },
       ],
