@@ -61,6 +61,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://sunzrooms.com",
     siteName: "SUNZ ROOMS.",
+    images: [{ url: "/images/ogp.jpg", width: 1200, height: 630, alt: "SUNZ ROOMS. naha miebashi — 暮らすように、泊まる。" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SUNZ ROOMS. — naha miebashi",
+    description: "暮らすように、泊まる。Live as you stay.",
+    images: ["/images/ogp.jpg"],
   },
 };
 
