@@ -14,7 +14,7 @@ const platforms = [
     { label: "3F — Room 301", url: "https://airbnb.jp/h/sunzrooms301" },
   ]},
   { name: "Booking.com", url: "https://www.booking.com/hotel/jp/sunz-rooms-naha-miebashi.ja.html", noteKey: "booking" as const, color: "#003580", active: true, rooms: null },
-  { name: "楽天トラベル", subtitle: "Rakuten Travel", url: "https://travel.rakuten.co.jp", noteKey: "rakuten" as const, color: "#BF0000", active: false, rooms: null },
+  { name: "楽天トラベル", subtitle: "Rakuten Travel", url: "https://hotel.travel.rakuten.co.jp/hinfo/198960/", noteKey: "rakuten" as const, color: "#BF0000", active: true, rooms: null },
   { name: "じゃらん", subtitle: "Jalan", url: "https://www.jalan.net", noteKey: "jalan" as const, color: "#FF6600", active: false, rooms: null },
   { name: "ヤフートラベル", subtitle: "Yahoo Travel", url: "https://travel.yahoo.co.jp", noteKey: "yahoo" as const, color: "#FF0033", active: false, rooms: null },
   { name: "Agoda", url: "https://www.agoda.com", noteKey: "agoda" as const, color: "#5392F9", active: false, rooms: null },
