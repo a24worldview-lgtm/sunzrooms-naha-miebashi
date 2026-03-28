@@ -7,22 +7,13 @@ import { ExternalLink } from "lucide-react";
 import { useLanguage } from "@/lib/language-context";
 import { translations as t } from "@/lib/i18n";
 
-const platformNoteKeys = {
-  Airbnb: "airbnb",
-  "Booking.com": "booking",
-  "楽天トラベル": "rakuten",
-  "じゃらん": "jalan",
-  "ヤフートラベル": "yahoo",
-  Agoda: "agoda",
-} as const;
-
 const platforms = [
   { name: "Airbnb", url: "https://airbnb.jp/h/sunzrooms101", noteKey: "airbnb" as const, color: "#FF5A5F", active: true, rooms: [
     { label: "1F — Room 101", url: "https://airbnb.jp/h/sunzrooms101" },
     { label: "2F — Room 201", url: "https://airbnb.jp/h/sunzrooms201" },
     { label: "3F — Room 301", url: "https://airbnb.jp/h/sunzrooms301" },
   ]},
-  { name: "Booking.com", url: "https://www.booking.com", noteKey: "booking" as const, color: "#003580", active: false, rooms: null },
+  { name: "Booking.com", url: "https://www.booking.com/hotel/jp/sunz-rooms-naha-miebashi.ja.html", noteKey: "booking" as const, color: "#003580", active: true, rooms: null },
   { name: "楽天トラベル", subtitle: "Rakuten Travel", url: "https://travel.rakuten.co.jp", noteKey: "rakuten" as const, color: "#BF0000", active: false, rooms: null },
   { name: "じゃらん", subtitle: "Jalan", url: "https://www.jalan.net", noteKey: "jalan" as const, color: "#FF6600", active: false, rooms: null },
   { name: "ヤフートラベル", subtitle: "Yahoo Travel", url: "https://travel.yahoo.co.jp", noteKey: "yahoo" as const, color: "#FF0033", active: false, rooms: null },
@@ -83,6 +74,14 @@ export default function BookingPage() {
                             <ExternalLink size={13} className="text-muted-foreground" />
                           </a>
                         ))}
+                      </div>
+                    )}
+                    {!platform.rooms && platform.active && (
+                      <div className="mt-4">
+                        <a href={platform.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90">
+                          {bt.bookNow[locale]}
+                          <ExternalLink size={13} />
+                        </a>
                       </div>
                     )}
                     {!platform.active && (
