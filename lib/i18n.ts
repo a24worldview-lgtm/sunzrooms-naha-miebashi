@@ -91,6 +91,7 @@ export const translations = {
     priceNote: { ja: "料金と空室状況はプラットフォームによって異なる場合があります。\nお得な料金を見つけるため、複数のサイトを比較されることをおすすめします。", en: "Prices and availability may vary by platform.\nWe recommend comparing multiple sites for the best rates.", "zh-cn": "价格和空房情况可能因平台而异。\n建议您比较多个网站以找到最优价格。", "zh-tw": "價格和空房情況可能因平台而異。\n建議您比較多個網站以找到最優價格。", ko: "요금과 빈방 상황은 플랫폼에 따라 다를 수 있습니다.\n최적의 요금을 위해 여러 사이트를 비교하시길 권장합니다." },
     bookByRoom: { ja: "お部屋から予約する", en: "Book by room", "zh-cn": "按房间预订", "zh-tw": "按房間訂房", ko: "객실별 예약" },
     quickLinks: { ja: "Quick Links by Room", en: "Quick Links by Room", "zh-cn": "Quick Links by Room", "zh-tw": "Quick Links by Room", ko: "Quick Links by Room" },
+    bookNow: { ja: "予約する", en: "Book now", "zh-cn": "立即预订", "zh-tw": "立即訂房", ko: "예약하기" },
     bookOnAirbnb: { ja: "Airbnbで予約する", en: "Book on Airbnb", "zh-cn": "在Airbnb预订", "zh-tw": "在Airbnb訂房", ko: "Airbnb에서 예약하기" },
   },
   accessPage: {
